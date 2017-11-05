@@ -1,3 +1,7 @@
+/** {
+  border: 1px solid red;
+}*/
+
 body{
     /* background: linear-gradient(136deg, #1ad7c0, #8E44AD, #ff9b11, #1F3A93, #ddd8c6, #000000, #000000);  */
     background: linear-gradient(136deg, #FBA100,#87D37C, #4484CE, #9B59B6, #EFEFEF, #000000, #ECF0F1);
@@ -8,6 +12,8 @@ body{
     -o-animation: AnimationName 70s ease infinite;
     animation: AnimationName 70s eas e infinite;
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 @-webkit-keyframes AnimationName {
@@ -43,6 +49,9 @@ body{
   margin: 0;
   padding: 0;
   color: #fff;
+  /*background-color: rgba(0, 0, 0, 0.2);
+  background-size: 1200% 1200%;*/
+
 }
 
 
@@ -57,6 +66,7 @@ nav {
 ul {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   padding: 0;
 }
 
@@ -65,9 +75,9 @@ li:first-child {
 }
 
 nav a {
-  padding: 8px;
+  padding: 18px;
   text-decoration: none;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   font-size: 1.2em;
   color: #fff;
   font-weight: 100;
@@ -92,13 +102,15 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'Poiret One', cursive;
 }
 
 h1 {
-  font-size: 7em;
+  font-size: 5em;
   margin: 10px;
   font-weight: 200;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
+  font-family: 'Poiret One', cursive;
 }
 
 h2 {
@@ -110,4 +122,59 @@ h2 {
 h4 {
   margin: 5px;
   font-weight: 100;
+}
+
+/************ABOUT**************/
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.about-section {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  margin: 70px auto;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+img {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 30%;
+  height: 30%;
+  margin: 10px;
+}
+
+.about-and-pic {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.about-text {
+  padding: 5px;
+
+}
+
+.about-text {
+  font-size: 1.1em;
+}
+
+.skills {
+  margin-top: 50px;
+}
+
+.skill-list {
+  margin-top: 20px;
+}
+
+i {
+  color: #fff;
+  font-size: 3em;
+  padding: 10px;
+  display: inline-block;
 }
