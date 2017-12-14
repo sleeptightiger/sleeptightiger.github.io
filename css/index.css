@@ -245,6 +245,16 @@ i {
   font-size: 3.8em;
 }
 
+/**********************CONTACT**************************/
+
+
+.fa {
+  font-size: 6em;
+  margin: 40px;
+  color: rgba(255,255,255,.9);
+}
+
+
 /**********************MEDIA QUERIES**************************/
 
 @media screen and (max-width: 1200px) {
