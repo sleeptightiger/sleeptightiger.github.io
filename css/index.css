@@ -281,6 +281,7 @@ header span:hover {
   background: #120103;
   background-position: 50% 50%;
   background-size: cover;
+  overflow: hidden;
   transition: left 0s .75s;
 }
 
@@ -334,10 +335,11 @@ header span:hover {
 }
 
 .p-slide-one {
-  background: -webkit-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Safari 5.1-6.0 */
-  background: -o-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Opera 11.1-12.0 */
-  background: -moz-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Firefox 3.6-15 */
-  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Standard syntax */
+  background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Safari 5.1-6.0 */
+  background-image: -o-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Opera 11.1-12.0 */
+  background-image: -moz-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Firefox 3.6-15 */
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Standard syntax */
+
 }
 
 
