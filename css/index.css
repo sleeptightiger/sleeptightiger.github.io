@@ -342,6 +342,14 @@ header span:hover {
 
 }
 
+.p-slide-three {
+  background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png'); /* Safari 5.1-6.0 */
+  background-image: -o-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png'); /* Opera 11.1-12.0 */
+  background-image: -moz-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png'); /* Firefox 3.6-15 */
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png'); /* Standard syntax */
+
+}
+
 .p-slide-four {
   background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/tic-tac-toe.png'); /* Safari 5.1-6.0 */
   background-image: -o-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/tic-tac-toe.png'); /* Opera 11.1-12.0 */
