@@ -188,7 +188,7 @@ header span:hover {
 .tab-group {
   max-width: 300px;
   width: 100%;
-  height: auto;
+  height: 344px;
   box-shadow: 0 1px 8px rgba(0,0,0,.2);
   border: 1px solid rgba(255,255,255,.2);
 }
@@ -360,7 +360,7 @@ header span:hover {
 }
 
 .p-slide-eight {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/weather-app.png'); 
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/weather-app.png');
 
 }
 
