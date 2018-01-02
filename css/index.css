@@ -335,30 +335,34 @@ header span:hover {
 }
 
 .p-slide-one {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); 
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png');
 
 }
 
 .p-slide-three {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png'); 
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png');
 
 }
 
 .p-slide-four {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/tic-tac-toe.png'); 
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/tic-tac-toe.png');
 
 }
 
 .p-slide-six {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/cards-against.png'); 
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/cards-against.png');
 
 }
 
 .p-slide-seven {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/ajaxify-reddit.png'); 
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/ajaxify-reddit.png');
 
 }
 
+.p-slide-eight {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/weather-app.png'); 
+
+}
 
 
 /**********************ABOUT**************************/
