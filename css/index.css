@@ -335,34 +335,27 @@ header span:hover {
 }
 
 .p-slide-one {
-  background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Safari 5.1-6.0 */
-  background-image: -o-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Opera 11.1-12.0 */
-  background-image: -moz-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Firefox 3.6-15 */
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); /* Standard syntax */
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/rsvp.png'); 
 
 }
 
 .p-slide-three {
-  background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png'); /* Safari 5.1-6.0 */
-  background-image: -o-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png'); /* Opera 11.1-12.0 */
-  background-image: -moz-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png'); /* Firefox 3.6-15 */
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png'); /* Standard syntax */
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png'); 
 
 }
 
 .p-slide-four {
-  background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/tic-tac-toe.png'); /* Safari 5.1-6.0 */
-  background-image: -o-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/tic-tac-toe.png'); /* Opera 11.1-12.0 */
-  background-image: -moz-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/tic-tac-toe.png'); /* Firefox 3.6-15 */
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/tic-tac-toe.png'); /* Standard syntax */
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/tic-tac-toe.png'); 
 
 }
 
 .p-slide-six {
-  background-image: -webkit-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/cards-against.png'); /* Safari 5.1-6.0 */
-  background-image: -o-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/cards-against.png'); /* Opera 11.1-12.0 */
-  background-image: -moz-linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/cards-against.png'); /* Firefox 3.6-15 */
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/cards-against.png'); /* Standard syntax */
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/cards-against.png'); 
+
+}
+
+.p-slide-seven {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/ajaxify-reddit.png'); 
 
 }
 
