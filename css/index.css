@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.link {
+  cursor: pointer;
+}
+
 body{
     /* background: linear-gradient(136deg, #1ad7c0, #8E44AD, #ff9b11, #1F3A93, #ddd8c6, #000000, #000000);  */
     /* background: linear-gradient(136deg, #FBA100,#87D37C, #4484CE, #9B59B6, #EFEFEF, #000000, #ECF0F1); */
@@ -339,27 +343,27 @@ header span:hover {
 
 }
 
-.p-slide-three {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/code-scratch.png');
+.p-slide-two {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/mustacchio.png');
 
 }
 
-.p-slide-four {
+.p-slide-three {
   background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/tic-tac-toe.png');
 
 }
 
-.p-slide-six {
+.p-slide-four {
   background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/cards-against.png');
 
 }
 
-.p-slide-seven {
+.p-slide-five {
   background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/ajaxify-reddit.png');
 
 }
 
-.p-slide-eight {
+.p-slide-six {
   background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../img/weather-app.png');
 
 }
