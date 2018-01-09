@@ -52,7 +52,7 @@ body{
   margin: 0;
   padding: 0;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
   background: rgba(0,0,0,.01);
   color: #fff;
   text-align: center;
@@ -69,6 +69,8 @@ header {
   z-index: 900;
   width: 100%;
   height: 10vh;
+  max-height: 100px;
+  min-height: 80px;
   display: flex;
   justify-content: space-between;
   /* align-items: space-between; */
@@ -264,8 +266,8 @@ header span:hover {
 
 .wrap {
   width: 60%;
-  height: 70vh;
-  max-height: 800px;
+  height: 800px;
+  margin-bottom: 100px;
   position: relative;
   overflow: hidden;
   background: #120103;
@@ -283,7 +285,7 @@ header span:hover {
   z-index: 10;
   padding: 0;
   background: #120103;
-  background-position: 50% 50%;
+  background-position: top;
   background-size: cover;
   overflow: hidden;
   transition: left 0s .75s;
