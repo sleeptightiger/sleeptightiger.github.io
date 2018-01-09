@@ -189,6 +189,7 @@ header span:hover {
   display: flex;
   justify-content: space-around;
   margin-top: 1%;
+  /* padding: 0 10%; */
 }
 
 .tab-group {
@@ -274,6 +275,7 @@ header span:hover {
   color: #fff;
   text-align: center;
   box-shadow: 0 1px 8px rgba(0,0,0,.2);
+
 }
 
 .p-slide {
@@ -289,6 +291,7 @@ header span:hover {
   background-size: cover;
   overflow: hidden;
   transition: left 0s .75s;
+
 }
 
 .description {
@@ -300,7 +303,7 @@ header span:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 10px;
+  padding: 35px 20px;
   background: linear-gradient( rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.8) );
   width: 100%;
 }
@@ -314,7 +317,7 @@ header span:hover {
   margin: 0;
   padding: 5px;
   display: inline-block;
-  font-size: 1.3em;
+  font-size: 1.8em;
 }
 
 .description .fa {
