@@ -16,7 +16,7 @@ body{
     -webkit-animation: AnimationName 70s ease infinite;
     -moz-animation: AnimationName 70s ease infinite;
     -o-animation: AnimationName 70s ease infinite;
-    animation: AnimationName 70s eas e infinite;
+    animation: AnimationName 70s ease infinite;
     height: 100%;
     width: 100%;
     padding: 0;
