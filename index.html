@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Morals + Table</title>
-    <script src="https://use.fontawesome.com/f5f0085742.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One|Quicksand:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
   <body>
@@ -16,112 +17,87 @@
         <div class="logo">
           <h1>Morals + Table</h1>
         </div>
-
         <nav class="header-nav">
-          <label for="slide-1-trigger"><span class="link">Home</span></label>
-          <label for="slide-2-trigger"><span class="link">Projects</span></label>
-          <label for="slide-3-trigger"><span class="link">About</span></label>
-          <label for="slide-4-trigger"><span class="link">Contact</span></label>
+          <ul>
+            <li><button class="homeButton navButton button" type="button" name="button">Home</button></li>
+            <li><button class="projectsButton navButton button" type="button" name="button">Projects</button></li>
+            <li><button class="aboutButton navButton button" type="button" name="button">About</button></li>
+            <li><button class="contactButton navButton button" type="button" name="button">Contact</button></li>
+          </ul>
         </nav>
-
       </header>
-      <input type="radio" name="slides" id="slide-1-trigger" checked>
-      <section class="slide slide-one">
-        <div class="home sliding-animation">
-          <h1>Gerry Morales Meza</h1>
-          <h3>Web Developer | Lover of Life</h3>
-        </div>
-      </section>
-      <input type="radio" name="slides" id="slide-2-trigger">
-      <section class="slide slide-two">
-        <div class="projects sliding-animation">
 
-          <div class="tab-group">
-            <div class="tab">
-              <input type="radio" id="tab-one" name="tabs">
-              <label for="tab-one" class="tabLabel"><span> &rang; Main Projects</span></label>
-              <div class="tab-content">
-                <label for="p-slide-1-trigger"><span class="link"> &minus; Elegant</span></label>
-                <label for="p-slide-2-trigger"><span class="link"> &minus; Mustacchio </span></label>
-                <label for="p-slide-3-trigger"><span class="link"> &minus; Tic-Tac-Toe w/React.js </span></label>
+      <div class="home section">
+        <h1>Gerry Morales Meza</h1>
+        <h3>Web Developer | Lover of Life</h3>
+      </div>
+
+      <div class="projects section">
+        <button class="button cat-button all-button" type="button" name="button">All</button>
+        <button class="button cat-button web-button" type="button" name="button">Websites</button>
+        <button class="button cat-button rand-button" type="button" name="button">Random Projects</button>
+
+        <div class="grid">
+          <div class="java tile website">
+            <span>
+              <div class="icons">
+                <a href="https://sleeptightiger.github.io/java-site/" target="_blank"><i class="fas fa-globe shadow"></i></a>
+                <a href="https://github.com/sleeptightiger/java-site" target="_blank"><i class="fab fa-github shadow"></i></a>
               </div>
-            </div>
-            <div class="tab">
-              <input type="radio" id="tab-two" name="tabs">
-              <label for="tab-two" class="tabLabel"><span> &rang; Random Projects</span></label>
-              <div class="tab-content">
-                <label for="p-slide-4-trigger"><span class="link"> &minus; Cards Against</span></label>
-                <label for="p-slide-5-trigger"><span class="link"> &minus; Ajaxify Reddit</span></label>
-                <label for="p-slide-6-trigger"><span class="link"> &minus; Weather App </span></label>
+            </span>
+            <div class="java-img img focus"></div>
+          </div>
+          <div class="elegant tile website">
+            <span>
+              <div class="icons">
+                <a href="https://sleeptightiger.github.io/elegant/" target="_blank"><i class="fas fa-globe shadow"></i></a>
+                <a href="https://github.com/sleeptightiger/elegant" target="_blank"><i class="fab fa-github shadow"></i></a>
               </div>
-            </div>
+            </span>
+            <div class="elegant-img img focus"></div>
+          </div>
+          <div class="mustacchio tile website">
+            <span>
+              <div class="icons">
+                <a href="https://sleeptightiger.github.io/mustache/" target="_blank"><i class="fas fa-globe shadow"></i></a>
+                <a href="https://github.com/sleeptightiger/mustache" target="_blank"><i class="fab fa-github shadow"></i></a>
+              </div>
+            </span>
+            <div class="mustacchio-img img focus"></div>
+          </div>
+          <div class="reddit tile random">
+            <span>
+              <div class="icons">
+                <a href="https://sleeptightiger.github.io/ajaxify-reddit/" target="_blank"><i class="fas fa-globe shadow"></i></a>
+                <a href="https://github.com/sleeptightiger/ajaxify-reddit" target="_blank"><i class="fab fa-github shadow"></i></a>
+              </div>
+            </span>
+            <div class="reddit-img img focus"></div>
+          </div>
+          <div class="weather tile random">
+            <span>
+              <div class="icons">
+                <a href="https://sleeptightiger.github.io/weather-app/" target="_blank"><i class="fas fa-globe shadow"></i></a>
+                <a href="https://github.com/sleeptightiger/weather-app" target="_blank"><i class="fab fa-github shadow"></i></a>
+              </div>
+            </span>
+            <div class="weather-img img focus"></div>
+          </div>
+          <div class="cards tile random">
+            <span>
+              <div class="icons">
+                <a href="https://cards-against-f6ed5.firebaseapp.com/" target="_blank"><i class="fas fa-globe shadow"></i></a>
+                <a href="https://github.com/sleeptightiger/ga-cards-react/tree/master/cards-react" target="_blank"><i class="fab fa-github shadow"></i></a>
+              </div>
+            </span>
+            <div class="cards-img img focus"></div>
           </div>
 
-          <div class="wrap">
-            <input type="radio" name="p-slides" id="p-slide-1-trigger" checked>
-            <section class="p-slide p-slide-one">
-              <div class="description">
-                <h2><a href="https://sleeptightiger.github.io/elegant/" target="_blank" rel="noopener noreferrer">Elegant</a><a href="https://github.com/sleeptightiger/elegant" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a></h2>
-                <h3>Technologies Used:</h3>
-                <p>HTML | CSS | Sass | JavaScript | Grid | Flexbox</p>
-                <p>Simple website to practice my HTML and CSS from a free online PSD.</p>
-              </div>
-            </section>
-
-            <input type="radio" name="p-slides" id="p-slide-2-trigger">
-            <section class="p-slide p-slide-two">
-              <div class="description">
-                <h2><a href="https://sleeptightiger.github.io/mustache/" target="_blank" rel="noopener noreferrer">Mustacchio</a><a href="https://github.com/sleeptightiger/mustache" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a></h2>
-                <h3>Technologies Used:</h3>
-                <p>HTML | CSS | Sass</p>
-                <p>Simple website to practice my HTML and CSS from a free online PSD.</p>
-              </div>
-            </section>
-            <input type="radio" name="p-slides" id="p-slide-3-trigger">
-            <section class="p-slide p-slide-three">
-              <div class="description">
-                <h2><a href="https://tranquil-lowlands-82558.herokuapp.com/" target="_blank" rel="noopener noreferrer">Tic-Tac-Toe w/React.js</a><a href="https://github.com/sleeptightiger/tic-tac-toe-react" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a></h2>
-                <h3>Technologies Used:</h3>
-                <p>React.js | Heroku</p>
-              </div>
-            </section>
-
-            <input type="radio" name="p-slides" id="p-slide-4-trigger">
-            <section class="p-slide p-slide-four">
-              <div class="description">
-                <h2><a href="https://cards-against-f6ed5.firebaseapp.com/" target="_blank" rel="noopener noreferrer">Cards Against</a><a href="https://github.com/sleeptightiger/ga-cards-react/tree/master/cards-react" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a></h2>
-                <h3>Technologies Used:</h3>
-                <p>React.js | Firebase</p>
-              </div>
-            </section>
-            <input type="radio" name="p-slides" id="p-slide-5-trigger">
-            <section class="p-slide p-slide-five">
-              <div class="description">
-                <h2><a href="https://sleeptightiger.github.io/ajaxify-reddit/" target="_blank" rel="noopener noreferrer">Ajaxify Reddit</a><a href="https://github.com/sleeptightiger/ajaxify-reddit" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a></h2>
-                <h3>Technologies Used:</h3>
-                <p>Ajax | Reddit API</p>
-              </div>
-            </section>
-            <input type="radio" name="p-slides" id="p-slide-6-trigger">
-            <section class="p-slide p-slide-six">
-              <div class="description">
-                <h2><a href="https://sleeptightiger.github.io/weather-app/" target="_blank" rel="noopener noreferrer">Weather App</a><a href="https://github.com/sleeptightiger/weather-app" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a></h2>
-                <h3>Technologies Used:</h3>
-                <p>JQuery | Ajax | OpenWeatherMap API</p>
-              </div>
-            </section>
-
-          </div>
-
-
-
-
-
         </div>
-      </section>
-      <input type="radio" name="slides" id="slide-3-trigger">
-      <section class="slide slide-three">
-        <div class="about sliding-animation">
+      </div>
+
+      <div class="about section">
+        <div class="wrapper">
           <div class="pic-text">
               <img src="img/profile-pic.jpeg" alt="profile-pic">
               <div class="about-text">
@@ -154,20 +130,17 @@
 
           </div>
         </div>
-      </section>
 
-      <input type="radio" name="slides" id="slide-4-trigger">
-      <section class="slide slide-four">
-        <div class="contact">
-          <a href="https://github.com/sleeptightiger"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/gerry-morales-meza"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-          <a href="mailto:gerrymoralesmeza@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        </div>
-      </section>
+      </div>
+
+      <div class="contact section">
+        <a href="https://github.com/sleeptightiger"><i class="fab fa-github-square"></i></a>
+        <a href="https://www.linkedin.com/in/gerry-morales-meza"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:gmorales@utexas.edu"><i class="fas fa-envelope"></i></a>
+      </div>
 
     </div>
 
-
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
