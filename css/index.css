@@ -114,13 +114,13 @@ body{
   text-align: left;
   color: #FFF;
   width: 100%;
-  /* height: 50px; */
   font-size: 25px;
   font-family: 'Poiret One', cursive;
   border: 1px solid rgba(255,255,255,.3);
   text-shadow: 0px 1px 3px rgba(0,0,0,.4);
   background-color: rgba(255,255,255,.01);
   box-shadow: inset 0 0 5px 3px rgba(255,255,255,0.2);
+  cursor: pointer;
 }
 
 .blur {
@@ -542,6 +542,28 @@ a .fa-github {
 
   .cards-img {
     background-position: top;
+  }
+
+  .elegant-img,
+  .mustacchio-img,
+  .java-img,
+  .reddit-img,
+  .weather-img,
+  .cards-img {
+    /* filter: blur(1px); */
+  }
+
+
+
+  .java span,
+  .elegant span,
+  .mustacchio span,
+  .reddit span,
+  .weather span,
+  .cards span {
+    opacity: 1;
+    transform: translateY(0px);
+    /* z-index: 999; */
   }
 }
 
