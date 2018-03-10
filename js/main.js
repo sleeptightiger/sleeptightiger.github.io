@@ -118,7 +118,7 @@ allButton.addEventListener('mouseout', (e) => {
 });
 
 
-allButton.classList.toggle('focus');
+allButton.classList.toggle('cat-hover');
 webClicked = false;
 ranClicked = false;
 allClicked = true;
@@ -127,15 +127,15 @@ for(let i = 0; i < tiles.length; i++) {
 }
 
 webButton.addEventListener('click', () => {
-  webButton.classList.toggle('focus');
+  webButton.classList.toggle('cat-hover');
   webClicked = true;
   ranClicked = false;
   allClicked = false;
-  if(randomButton.classList.contains('focus')) {
-    randomButton.classList.remove('focus');
+  if(randomButton.classList.contains('cat-hover')) {
+    randomButton.classList.remove('cat-hover');
   }
-  if(allButton.classList.contains('focus')) {
-    allButton.classList.remove('focus');
+  if(allButton.classList.contains('cat-hover')) {
+    allButton.classList.remove('cat-hover');
   }
   removeClass(tiles, 'focus');
   for(let i = 0; i < tiles.length; i++) {
@@ -146,15 +146,15 @@ webButton.addEventListener('click', () => {
 });
 
 randomButton.addEventListener('click', () => {
-  randomButton.classList.toggle('focus');
+  randomButton.classList.toggle('cat-hover');
   webClicked = false;
   ranClicked = true;
   allClicked = false;
-  if(webButton.classList.contains('focus')) {
-    webButton.classList.remove('focus');
+  if(webButton.classList.contains('cat-hover')) {
+    webButton.classList.remove('cat-hover');
   }
-  if(allButton.classList.contains('focus')) {
-    allButton.classList.remove('focus');
+  if(allButton.classList.contains('cat-hover')) {
+    allButton.classList.remove('cat-hover');
   }
   removeClass(tiles, 'focus');
   for(let i = 0; i < tiles.length; i++) {
@@ -165,15 +165,15 @@ randomButton.addEventListener('click', () => {
 });
 
 allButton.addEventListener('click', () => {
-  allButton.classList.toggle('focus');
+  allButton.classList.toggle('cat-hover');
   webClicked = false;
   ranClicked = false;
   allClicked = true;
-  if(randomButton.classList.contains('focus')) {
-    randomButton.classList.remove('focus');
+  if(randomButton.classList.contains('cat-hover')) {
+    randomButton.classList.remove('cat-hover');
   }
-  if(webButton.classList.contains('focus')) {
-    webButton.classList.remove('focus');
+  if(webButton.classList.contains('cat-hover')) {
+    webButton.classList.remove('cat-hover');
   }
   removeClass(tiles, 'focus');
   for(let i = 0; i < tiles.length; i++) {

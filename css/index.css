@@ -298,8 +298,38 @@ header li {
   transition: all ease-out .5s;
 }
 
+.cat-buttons {
+  /* position: absolute; */
+  /* left: 0px; */
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  max-width: 800px;
+}
+
 .cat-button {
   margin: 0 5px;
+  background-color: transparent;
+  color: rgba(255,255,255,.9);
+  border: none;
+  padding-bottom: 5px;
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+  transition: all ease-out .3s;
+}
+
+.cat-button:hover {
+  border-radius: 0px;
+  color: rgba(255,255,255,.7);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255,255,255,.7);
+}
+
+.cat-hover {
+  border-radius: 0px;
+  color: rgba(255,255,255,.7);
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255,255,255,.7);
 }
 
 .grid {
@@ -308,6 +338,7 @@ header li {
   display: grid;
   min-height: 600px;
   margin: 50px auto;
+  margin-top: 20px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 20px;
