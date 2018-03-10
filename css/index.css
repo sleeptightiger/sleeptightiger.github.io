@@ -62,7 +62,118 @@ body{
   text-align: center;
 }
 
+/************************HIDDEN************************************/
+
+.hiddenMenu {
+  width: 100%;
+  background: transparent;
+  /* height: 325px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  /* border: 1px solid rgba(255,255,255,.3);
+  text-shadow: 0px 1px 3px rgba(0,0,0,.4);
+  background-color: rgba(255,255,255,.01);
+  box-shadow: inset 0 0 5px 3px rgba(255,255,255,0.2); */
+  transform: translateY(-325px);
+  transition: all ease-out .3s;
+}
+
+.unhide {
+  transform: translateY(0px);
+}
+
+.hiddenNav {
+  position: relative;
+  top: 0px;
+  left: 0;
+  width: 100%;
+}
+
+.hiddenNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: inline-block;
+}
+
+.hiddenNav ul li {
+  width: 100%;
+}
+
+.hiddenNav ul li:first-child button {
+  /* color: black; */
+  padding-top: 100px;
+}
+
+.hiddenNav ul li button {
+  padding: 15px;
+  padding-left: 25px;
+  text-align: left;
+  color: #FFF;
+  width: 100%;
+  /* height: 50px; */
+  font-size: 25px;
+  font-family: 'Poiret One', cursive;
+  border: 1px solid rgba(255,255,255,.3);
+  text-shadow: 0px 1px 3px rgba(0,0,0,.4);
+  background-color: rgba(255,255,255,.01);
+  box-shadow: inset 0 0 5px 3px rgba(255,255,255,0.2);
+}
+
+.blur {
+  filter: blur(6px);
+}
+
 /************************HEADER************************************/
+
+.hamburger {
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  z-index: 101;
+  cursor: pointer;
+  box-sizing: content-box;
+  padding: 5px;
+  z-index: 999;
+}
+
+.line {
+  position: absolute;
+  height: 3px;
+  width: 29px;
+  background-color: rgba(255,255,255,.8);
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,0.1), 0px -2px 1px 0px rgba(0,0,0,.1);
+  border-radius: 3px;
+  transition: all cubic-bezier(0.25, 0.1, 0.3, 1.65) 0.3s;
+}
+
+.line1 {
+  top: 18%;
+}
+
+.line2 {
+  top: 50%;
+}
+
+.line3 {
+  top: 83%;
+}
+
+.close .line1 {
+  transform: rotate(135deg);
+  top: 50%;
+}
+
+.close .line2, .close .line3 {
+  transform: rotate(225deg);
+  top: 50%;
+}
+
 
 header {
   font-family: 'Poiret One', cursive;
@@ -71,14 +182,15 @@ header {
   left: 0;
   z-index: 900;
   width: 100%;
-  height: 10vh;
+  height: 60px;
   max-height: 100px;
   min-height: 80px;
   display: flex;
   justify-content: space-between;
   text-shadow: 0px 1px 3px rgba(0,0,0,.3);
+  /* border: 1px solid black; */
   margin-top: 15px;
-
+  transition: all ease-out .3s;
 }
 
 .header-nav {
@@ -156,7 +268,7 @@ header li {
 }
 
 .home h1, h3 {
-  color: color: rgba(255,255,255,.9);
+  color: rgba(255,255,255,.9);
   text-shadow: 0px 1px 3px rgba(0,0,0,.3);
   font-family: 'Poiret One', cursive;
   font-weight: 100;
@@ -569,35 +681,27 @@ a .fa-github {
   header label {
     font-size: 1.1em;
   }
-  header span {
-    padding: 15px;
-  }
   .logo {
     font-size: 1em;
+  }
+  .home h1 {
+    font-size: 2.5em;
+  }
+  .home h3 {
+    font-size: .8em;
   }
 
 }
 
 @media screen and (max-width: 775px) {
   header {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     height: 13vh;
   }
   .logo {
-    margin: 5px;
+    margin-left: 20px;
     margin-bottom: 20px;
-    font-size: .8em;
-  }
-  .header-nav {
-    padding: 8px;
-  }
-
-  .home h1 {
-    font-size: 3em;
-  }
-
-  .home h3 {
     font-size: .8em;
   }
 

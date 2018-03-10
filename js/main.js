@@ -8,6 +8,10 @@ const webButton = document.querySelector('.web-button');
 const randomButton = document.querySelector('.rand-button');
 const allButton = document.querySelector('.all-button');
 const icons = document.querySelectorAll('.icons');
+const hiddenButtons = document.querySelectorAll('.hiddenButton');
+const hiddenMenu = document.querySelector('.hiddenMenu');
+const section = document.querySelectorAll('.part');
+const hamburger = document.querySelector('.hamburger');
 let webClicked = false;
 let ranClicked = false;
 let allClicked = false;
@@ -21,6 +25,19 @@ removeClass = (elem, css) => {
   }
 }
 
+for(let i = 0; i < hiddenButtons.length; i++) {
+  hiddenButtons[i].addEventListener('click', () => {
+    removeClass(sections, "appear");
+    removeClass(navButtons, "focus");
+    sections[i].classList.toggle("appear");
+    navButtons[i].classList.toggle("focus");
+    hiddenMenu.classList.toggle('unhide');
+    hamburger.classList.toggle('close');
+    for(let i = 0; i < section.length; i++) {
+      section[i].classList.toggle('blur');
+    };
+  });
+}
 
 for(let i = 0; i < navButtons.length; i++) {
   navButtons[i].addEventListener('click', () => {
