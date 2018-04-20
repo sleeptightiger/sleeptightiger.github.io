@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway:300,400,600,700');
+@import 'normalize';
+
+$black: #222;
+$white: #FEFEFE;
+$box-shadow: 1px 1px 2px 0px rgba(0,0,0,.4);
+$text-shadow: 1px 1px 2px rgba(0,0,0,.2);
+body {
+  background-color: $white;
+  overflow: hidden;
+}
+
+* {
+  // box-sizing: border-box;
+}
+
+
+@import 'hidden-menu';
+@import 'hamburger';
+@import 'home';

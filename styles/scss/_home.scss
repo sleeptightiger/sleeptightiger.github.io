@@ -1,0 +1,114 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  .hidden-icons {
+
+    position: absolute;
+    left: 5%;
+    bottom: 15%;
+    z-index: 90;
+    a {
+      font-size: 40px;
+      display: none;
+      opacity: 0;
+      color: $black;
+      transition: all ease-out .3s;
+      .fa-github-square {
+        margin-left: 5px;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .text {
+
+    position: absolute;
+    left: 5%;
+    bottom: 20%;
+    color: $black;
+    text-shadow: $text-shadow;
+    transition: all ease-out .3s;
+    h1 {
+      p {
+
+        font-family: 'Abril Fatface', serif;
+        font-size: 80px;
+        line-height: 1;
+        margin: 0
+      }
+    }
+    h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+
+}
+
+
+.arrow {
+  z-index: 88;
+  // overflow: hidden;
+  // box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,.4),$box-shadow;
+  display: inline-block;
+  background-color: transparent;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translate(-50%, 0%);
+  // border: 5px solid $black;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  transition: all ease-out .3s;
+  &:hover {
+    transform: translate(-50%, 0%) scale(1.2);
+    svg {
+      animation: arrowDown .9s linear 0s infinite;
+    }
+  }
+  svg {
+    line-height: 1;
+    align-self: center;
+    color: $black;
+    font-size: 30px;
+    transition: all ease-out .3s;
+  }
+}
+
+.shadow {
+  filter: drop-shadow( 1px 1px 1px rgba(0,0,0,.4) );
+}
+
+@keyframes arrowDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  80% {
+    opacity: .7;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .home {
+    .text {
+      z-index: 90;
+    }
+  }
+}
