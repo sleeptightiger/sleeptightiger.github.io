@@ -89,7 +89,7 @@ window.addEventListener('resize', () => {
   starSetter(c1, 100, 1, 1, 1);
   starSetter(c2, 20, 3, 1, 1);
   starSetter(c3, 15, 4, 1, 1);
-  starSetter(c4, 10, 6, 1, 1);
+  starSetter(c4, 20, 6, 1, 1);
 });
 
 
@@ -108,7 +108,7 @@ body.addEventListener('mousemove', (e) => {
 parallaxScroll = () => {
   layer1.style.top = -(window.pageYOffset / 8)+'px';
   layer2.style.top = -(window.pageYOffset / 9)+'px';
-  fg.style.top = -(window.pageYOffset / 10)+'px';
+  fg.style.top = -(window.pageYOffset / 3)+'px';
 }
 
 window.addEventListener('scroll', parallaxScroll, false);
