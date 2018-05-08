@@ -46,7 +46,7 @@
           position:absolute;
           top:50%;
           left: 10%;
-          transform: translate(0%, -50%);
+
         }
       }
       .skillbar-bar {
@@ -132,6 +132,9 @@
         }
         .skillbar-title {
           height: 100%;
+          span {
+            transform: translate(0%, -50%);
+          }
         }
         .skillbar-bar {
           height: 54px;

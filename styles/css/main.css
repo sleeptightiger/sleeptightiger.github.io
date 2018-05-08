@@ -811,8 +811,7 @@ header {
       .about .about-container .skills .skillbar-title span {
         position: absolute;
         top: 50%;
-        left: 10%;
-        transform: translate(0%, -50%); }
+        left: 10%; }
     .about .about-container .skills .skillbar-bar {
       background-color: #222;
       height: 35px;
@@ -878,6 +877,8 @@ header {
         height: 54px; }
       .about .about-container .skills .skillbar-title {
         height: 100%; }
+        .about .about-container .skills .skillbar-title span {
+          transform: translate(0%, -50%); }
       .about .about-container .skills .skillbar-bar {
         height: 54px; }
       .about .about-container .skills .skillbar-bar-percent {
