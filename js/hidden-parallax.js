@@ -4,25 +4,25 @@ hiddenLayer = document.querySelector('.hidden-layer');
 const hbg = document.querySelector('#hidden-bg');
 hbg.width = hiddenLayer.offsetWidth;
 hbg.height = hiddenLayer.offsetHeight;
-const hc1 = hbg.getContext('2d');
+let hc1 = hbg.getContext('2d');
 // first layer of stars
 const hlayer1 = document.querySelector('#hidden-layer1');
 hlayer1.width = hiddenLayer.offsetWidth;
 hlayer1.height = hiddenLayer.offsetHeight * 2;
-const hc2 = hlayer1.getContext('2d');
+let hc2 = hlayer1.getContext('2d');
 //second layer of stars
 const hlayer2 = document.querySelector('#hidden-layer2');
 hlayer2.width = hiddenLayer.offsetWidth;
 hlayer2.height = hiddenLayer.offsetHeight * 2;
-const hc3 = hlayer2.getContext('2d');
+let hc3 = hlayer2.getContext('2d');
 //foreground stars
 const hfg = document.querySelector('#hidden-fg');
 hfg.width = hiddenLayer.offsetWidth;
 hfg.height = hiddenLayer.offsetHeight * 2;
-const hc4 = hfg.getContext('2d');
+let hc4 = hfg.getContext('2d');
 
 const hstar = "#FEFEFE";
-circle = (x, y, r, canvas, lineX, lineY) => {
+hcircle = (x, y, r, canvas, lineX, lineY) => {
   canvas.beginPath();
   canvas.moveTo(x, y);
   canvas.arc(x, y, r, 0, Math.PI * 2, true);
@@ -45,13 +45,13 @@ circle = (x, y, r, canvas, lineX, lineY) => {
   canvas.stroke();
 }
 
-starSetter = (can, numberOfStars, r, lineX, lineY) => {
+hstarSetter = (can, numberOfStars, r, lineX, lineY) => {
   let x;
   let y;
   for(let i = 0; i < numberOfStars; i++) {
     x = Math.random() * (hbg.width - r * 2) + r;
     y = Math.random() * (hbg.height - r * 2) + r;
-    circle(x, y, r, can, lineX, lineY);
+    hcircle(x, y, r, can, lineX, lineY);
   }
 
 }
@@ -68,16 +68,32 @@ reset = (elem) => {
   elem.style.transform = `translate(0px, 0px)`;
 }
 
-starSetter(hc1, 100, 1, 1, 1);
-starSetter(hc2, 20, 3, 1, 1);
-starSetter(hc3, 15, 4, 1, 1);
-starSetter(hc4, 10, 6, 1, 1);
+hstarSetter(hc1, 100, 1, 1, 1);
+hstarSetter(hc2, 20, 3, 1, 1);
+hstarSetter(hc3, 15, 4, 1, 1);
+hstarSetter(hc4, 10, 6, 1, 1);
 
 
-
+window.addEventListener('resize', () => {
+  hbg.width = hiddenLayer.offsetWidth;
+  hbg.height = hiddenLayer.offsetHeight;
+  hc1 = hbg.getContext('2d');
+  hlayer1.width = hiddenLayer.offsetWidth;
+  hlayer1.height = hiddenLayer.offsetHeight * 2;
+  hc2 = hlayer1.getContext('2d');
+  hlayer2.width = hiddenLayer.offsetWidth;
+  hlayer2.height = hiddenLayer.offsetHeight * 2;
+  hc3 = hlayer2.getContext('2d');
+  hfg.width = hiddenLayer.offsetWidth;
+  hfg.height = hiddenLayer.offsetHeight * 2;
+  hc4 = hfg.getContext('2d');
+  hstarSetter(hc1, 100, 1, 1, 1);
+  hstarSetter(hc2, 20, 3, 1, 1);
+  hstarSetter(hc3, 15, 4, 1, 1);
+  hstarSetter(hc4, 10, 6, 1, 1);
+});
 
 body.addEventListener('mousemove', (e) => {
-
 
   let x = e.clientX;
   let y = e.clientY;

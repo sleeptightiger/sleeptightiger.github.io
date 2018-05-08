@@ -4,22 +4,22 @@ body = document.querySelector('body');
 const bg = document.querySelector('#bg');
 bg.width = window.innerWidth;
 bg.height = window.innerHeight;
-const c1 = bg.getContext('2d');
+let c1 = bg.getContext('2d');
 // first layer of stars
 const layer1 = document.querySelector('#layer1');
 layer1.width = window.innerWidth;
 layer1.height = window.innerHeight * 2;
-const c2 = layer1.getContext('2d');
+let c2 = layer1.getContext('2d');
 //second layer of stars
 const layer2 = document.querySelector('#layer2');
 layer2.width = window.innerWidth;
 layer2.height = window.innerHeight * 2;
-const c3 = layer2.getContext('2d');
+let c3 = layer2.getContext('2d');
 //foreground stars
 const fg = document.querySelector('#fg');
 fg.width = window.innerWidth;
 fg.height = window.innerHeight * 2;
-const c4 = fg.getContext('2d');
+let c4 = fg.getContext('2d');
 
 const star = "#222";
 circle = (x, y, r, canvas, lineX, lineY) => {
@@ -73,7 +73,24 @@ starSetter(c2, 20, 3, 1, 1);
 starSetter(c3, 15, 4, 1, 1);
 starSetter(c4, 10, 6, 1, 1);
 
-
+window.addEventListener('resize', () => {
+  bg.width = window.innerWidth;
+  bg.height = window.innerHeight;
+  c1 = bg.getContext('2d');
+  layer1.width = window.innerWidth;
+  layer1.height = window.innerHeight * 2;
+  c2 = layer1.getContext('2d');
+  layer2.width = window.innerWidth;
+  layer2.height = window.innerHeight * 2;
+  c3 = layer2.getContext('2d');
+  fg.width = window.innerWidth;
+  fg.height = window.innerHeight * 2;
+  c4 = fg.getContext('2d');
+  starSetter(c1, 100, 1, 1, 1);
+  starSetter(c2, 20, 3, 1, 1);
+  starSetter(c3, 15, 4, 1, 1);
+  starSetter(c4, 10, 6, 1, 1);
+});
 
 
 body.addEventListener('mousemove', (e) => {
@@ -95,10 +112,3 @@ parallaxScroll = () => {
 }
 
 window.addEventListener('scroll', parallaxScroll, false);
-
-// homeBg.addEventListener('mouseleave', ()=>{
-//   // reset(bg);
-//   // reset(layer1);
-//   // reset(layer2);
-//   // reset(fg);
-// });

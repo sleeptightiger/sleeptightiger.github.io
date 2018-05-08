@@ -446,11 +446,11 @@ body {
           transform: scale(1.05);
           transform-origin: left; }
       .hidden-menu h1 div div {
+        display: none;
         margin-top: 15px;
         align-self: center;
         height: 2px;
         flex-grow: 1;
-        display: inline-block;
         background-color: #222;
         border-top: 2px dashed #FEFEFE; }
 
@@ -489,6 +489,9 @@ body {
 
   .hidden-menu h1 {
     width: 40%; } }
+@media screen and (min-width: 1024px) {
+  .hidden-menu h1 div div {
+    display: inline-block; } }
 header {
   width: 90%;
   margin: 0 auto;
