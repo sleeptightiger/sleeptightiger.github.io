@@ -86,7 +86,7 @@
         box-shadow: $box-shadow;
       }
       hr {
-        width: 300px;
+        width: 60%;
         border: 0;
         height: 0;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -94,7 +94,8 @@
 
       }
       .about-text {
-        width: 300px;
+        width: 100%;
+        padding: 5px;
         margin: 0 auto;
         text-align: left;
         font-family: 'Raleway', sans-serif;
@@ -126,6 +127,7 @@
       margin: 0 auto;
       // padding-top: 10px;
       .skills {
+        width: 50%;
         padding: 0;
         .skillbar {
           height: 54px;
@@ -146,13 +148,12 @@
       }
       .pic-text {
         flex-direction: column;
-        width: 80%;
+        width: 50%;
         img {
           top: 35%;
           left: 50%;
         }
         .about-text {
-          width: 500px;
           top: 68%;
           left: 50%;
           padding: 30px;
