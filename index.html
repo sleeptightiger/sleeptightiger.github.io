@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Morals + Table</title>
+    <title>SleepTightTiger</title>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" href="styles/css/main.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
@@ -23,19 +23,19 @@
 
     <section class="hidden-menu">
       <h1>
-        <div>
+        <div class="home-link link">
           <p>home</p>
           <div></div>
         </div>
-        <div>
+        <div class="projects-link link">
           <p>projects</p>
           <div></div>
         </div>
-        <div>
+        <div class="about-link link">
           <p>about</p>
           <div></div>
         </div>
-        <div>
+        <div class="contact-link link">
           <p>contact</p>
           <div></div>
         </div>
@@ -45,8 +45,16 @@
     <section class="hidden-layer">
 
     </section>
+    <canvas id="hidden-bg"></canvas>
+    <canvas id="hidden-layer1"></canvas>
+    <canvas id="hidden-layer2"></canvas>
+    <canvas id="hidden-fg"></canvas>
 
     <section class="home">
+      <canvas id="bg"></canvas>
+      <canvas id="layer1"></canvas>
+      <canvas id="layer2"></canvas>
+      <canvas id="fg"></canvas>
       <div class="text">
         <h1>
           <p>sleep</p>
@@ -56,16 +64,195 @@
         <h3>Web Developer | Lover of Life</h3>
       </div>
       <div class="hidden-icons">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-github-square"></i></a>
-
+        <a href="https://www.linkedin.com/in/gerry-morales-meza/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/sleeptightiger" target="_blank"><i class="fab fa-github-square"></i></a>
+        <a href="https://codepen.io/dashboard/" target="_blank"><i class="fab fa-codepen"></i></a>
 
       </div>
     </section>
 
 
 
-    <a href="#" class="arrow"><i class="fas fa-angle-down shadow"></i></a>
+    <!-- <a href="#" class="arrow" onclick="initScroll(); return false;"><i class="fas fa-angle-down shadow"></i></a> -->
+
+    <section class="projects">
+      <h1 class="title">PROJECTS</h1>
+      <div id="projects">
+        <div class="flip3D">
+          <div class="back">
+            <h1>Java Revamp</h1>
+            <p class="description">This is my attempt at revamping the Austin Java site. I got to work with a great designer here.  While it's still underdevelopment, there's a lot of tips I got on hover transitions and page layout that I wanted to demonstrate.</p>
+            <p class="page-links-label">Pages up:</p>
+            <div class="page-links">
+              <a href="https://sleeptightiger.github.io/java-site/" target="_blank"><span>Home</span></a>
+              <a href="https://sleeptightiger.github.io/java-site/locations.html" target="_blank"><span>Locations</span></a>
+              <a href="https://sleeptightiger.github.io/java-site/barton.html" target="_blank"><span>Barton</span></a>
+              <a href="https://sleeptightiger.github.io/java-site/catering.html" target="_blank"><span>Catering</span></a>
+              <a href="https://sleeptightiger.github.io/java-site/buyCoffee.html" target="_blank"><span>Store</span></a>
+              <a href="https://sleeptightiger.github.io/java-site/merch.html" target="_blank"><span>Merch</span></a>
+            </div>
+
+          </div>
+          <div class="front">
+            <div class="overlay"></div>
+            <div class="img1 img"></div>
+          </div>
+        </div>
+        <div class="flip3D">
+          <div class="back not-java">
+            <div class="headline">
+              <h1>Elegant</h1>
+              <a class="git" href="https://sleeptightiger.github.io/elegant/" target="_blank"><i class="fab fa-github"></i></a>
+              <a class="web" href="https://sleeptightiger.github.io/elegant/" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+
+            <p class="description">On this one I mostly concentrated on being able to render a website template as close as to the design.</p>
+            <p class="page-links-label">Technologies:</p>
+            <p class="tech">HTML | CSS | JavaScript | CSS Grid | Flexbox | Scss</p>
+          </div>
+          <div class="front">
+            <div class="overlay"></div>
+            <div class="img2 img"></div>
+          </div>
+        </div>
+        <div class="flip3D">
+          <div class="back not-java">
+            <div class="headline">
+              <h1>Mustacchio</h1>
+              <a class="git" href="https://sleeptightiger.github.io/mustache/" target="_blank"><i class="fab fa-github"></i></a>
+              <a class="web" href="https://github.com/sleeptightiger/mustache" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+
+            <p class="description">This is another website I coded up from a template design</p>
+            <p class="page-links-label">Technologies:</p>
+            <p class="tech">HTML | CSS | JavaScript | CSS Grid | Flexbox | Scss</p>
+          </div>
+          <div class="front">
+            <div class="overlay"></div>
+            <div class="img3 img"></div>
+          </div>
+        </div>
+        <div class="flip3D">
+          <div class="back not-java">
+            <div class="headline">
+              <h1>Ajaxify Reddit</h1>
+              <a class="git" href="https://sleeptightiger.github.io/ajaxify-reddit/" target="_blank"><i class="fab fa-github"></i></a>
+              <a class="web" href="https://github.com/sleeptightiger/ajaxify-reddit" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+
+            <p class="description">On this project I got to work with the Reddit API using Ajax to retreive the json file. The aim was to redesign the reddit website by taking away the focus on all the text clutter.</p>
+            <p class="page-links-label">Technologies:</p>
+            <p class="tech">HTML | CSS | JavaScript | CSS Grid | Flexbox | Reddit API | Ajax</p>
+          </div>
+          <div class="front">
+            <div class="overlay"></div>
+            <div class="img4 img"></div>
+          </div>
+        </div>
+        <div class="flip3D">
+          <div class="back not-java">
+            <div class="headline">
+              <h1>Cards Against</h1>
+              <a class="git" href="https://github.com/sleeptightiger/ga-cards-react/tree/master/cards-react" target="_blank"><i class="fab fa-github"></i></a>
+              <a class="web" href="https://cards-against-f6ed5.firebaseapp.com/" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+
+            <p class="description">This a web app I worked on for a Reactjs coding class. It uses firebase as a database to create and store cards modeled after cards against humanity. This app was also deployed using firebase</p>
+            <p class="page-links-label">Technologies:</p>
+            <p class="tech">HTML | CSS | Firebase | Reactjs</p>
+          </div>
+          <div class="front">
+            <div class="overlay"></div>
+            <div class="img5 img"></div>
+          </div>
+        </div>
+        <div class="flip3D">
+          <div class="back not-java">
+            <div class="headline">
+              <h1>Weather App</h1>
+              <a class="git" href="https://github.com/sleeptightiger/weather-app" target="_blank"><i class="fab fa-github"></i></a>
+              <a class="web" href="https://sleeptightiger.github.io/weather-app/" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+
+            <p class="description">I worked with the OpenWeatherMap API on this app. I use JQuery to set up Ajax.</p>
+            <p class="page-links-label">Technologies:</p>
+            <p class="tech">HTML | CSS | JQuery | Ajax</p>
+          </div>
+          <div class="front">
+            <div class="overlay"></div>
+            <div class="img6 img"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="about">
+      <h1 class="title">ABOUT</h1>
+      <div class="about-container">
+        <div class="pic-text">
+            <img id="face-pic" src="img/profile-pic.jpeg" alt="profile-pic">
+            <hr />
+            <div class="about-text">
+              <p>I have always seen myself as passionate in what I do and a considerate coworker. The idea of group harmony and team dynamics are very important to me, while at the same time my strong sense of individuality helps me bring in a unique perspective when it comes to problem solving.</p>
+            </div>
+        </div>
+        <div class="skills">
+          <div class="skillbar" data-percent="70%">
+            <div class="skillbar-title"><span>HTML5</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skillbar-bar-percent">70%</div>
+          </div>
+          <div class="skillbar" data-percent="85%">
+            <div class="skillbar-title"><span>CSS3</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skillbar-bar-percent">85%</div>
+          </div>
+          <div class="skillbar" data-percent="90%">
+            <div class="skillbar-title"><span>JavaScript</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skillbar-bar-percent">90%</div>
+          </div>
+          <div class="skillbar" data-percent="60%">
+            <div class="skillbar-title"><span>Reactjs</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skillbar-bar-percent">60%</div>
+          </div>
+          <div class="skillbar" data-percent="50%">
+            <div class="skillbar-title"><span>Nodejs</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skillbar-bar-percent">50%</div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <section class="contact">
+      <div class="contact-container">
+        <div class="info">
+          <div class="detail">
+            <i class="fas fa-mobile-alt"></i>
+            <a href="tel:1-956-269-5537">(956)269-5537</a>
+          </div>
+          <div class="detail">
+            <i class="far fa-envelope"></i>
+            <a href="mailto:gmorales@utexas.edu">gmorales@utexas.edu</a>
+          </div>
+
+        </div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/gerry-morales-meza/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/sleeptightiger" target="_blank"><i class="fab fa-github-square"></i></a>
+          <a href="https://codepen.io/dashboard/" target="_blank"><i class="fab fa-codepen"></i></a>
+        </div>
+      </div>
+
+    </section>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/hidden-parallax.js"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
+    <!-- <script type="text/javascript" src="js/scroll-down.js"></script> -->
+    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/mobile.js"></script>
   </body>
 </html>

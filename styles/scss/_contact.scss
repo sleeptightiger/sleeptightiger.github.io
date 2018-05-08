@@ -1,0 +1,44 @@
+.contact {
+  position: relative;
+  height: 200px;
+  .contact-container {
+    position: relative;
+    left: 0%;
+    bottom: 0%;
+    margin-bottom: 30px;
+    background-color: $white;
+    // height: 150px;
+    box-shadow: $box-shadow;
+    padding-left: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .info {
+      margin-bottom: 20px;
+      .detail {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        svg {
+          font-size: 18px;
+          margin-right: 10px;
+        }
+        a {
+          font-family: 'Raleway', sans-serif;
+          // margin-top: -50px;
+          color: $black;
+          text-decoration: none;
+        }
+      }
+    }
+    .links {
+      a {
+        svg {
+          color: $black;
+          font-size: 40px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+}

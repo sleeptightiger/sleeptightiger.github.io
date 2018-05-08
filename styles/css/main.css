@@ -405,14 +405,17 @@ template {
 
 body {
   background-color: #FEFEFE;
-  overflow: hidden; }
+  overflow-x: hidden; }
+
+* {
+  box-sizing: border-box; }
 
 .hidden-menu {
   width: 100%;
   height: 100vh;
   background: #222;
-  z-index: 90;
-  position: absolute;
+  z-index: 91;
+  position: fixed;
   top: 0;
   right: -100%;
   transition: all linear .5s;
@@ -420,22 +423,25 @@ body {
   .hidden-menu h1 {
     position: absolute;
     left: 5%;
-    bottom: 20%;
-    width: 40%; }
+    bottom: 24%;
+    width: 90%;
+    padding-right: 10px;
+    margin: 0; }
     .hidden-menu h1 div {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      cursor: pointer; }
       .hidden-menu h1 div p {
         display: inline-block;
-        line-height: 1;
+        line-height: .9;
         font-family: 'Abril Fatface', serif;
-        font-size: 70px;
+        font-size: 75px;
         color: #FEFEFE;
         text-shadow: 1px 1px 2px black;
         margin: 0;
         letter-spacing: 2px;
         transition: all ease-out .3s;
-        margin-right: 20px; }
+        margin-right: 15px; }
         .hidden-menu h1 div p:hover {
           transform: scale(1.05);
           transform-origin: left; }
@@ -446,17 +452,30 @@ body {
         flex-grow: 1;
         display: inline-block;
         background-color: #222;
-        border-top: 2px dashed #FFF; }
+        border-top: 2px dashed #FEFEFE; }
 
 .hidden-layer {
   width: 50%;
   height: 100vh;
   background: linear-gradient(to left, black, #111 2%);
   z-index: 89;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
   transition: all linear .7s; }
+
+#hidden-bg,
+#hidden-layer1,
+#hidden-layer2,
+#hidden-fg {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: transparent;
+  transition: all ease-out .3s;
+  z-index: 90; }
 
 .slide {
   right: 0%; }
@@ -466,19 +485,23 @@ body {
 
 @media screen and (min-width: 650px) {
   .slide {
-    right: -50%; } }
+    right: -50%; }
+
+  .hidden-menu h1 {
+    width: 40%; } }
 header {
   width: 90%;
   margin: 0 auto;
-  position: absolute;
+  position: fixed;
   height: 50px;
   top: 5%;
-  right: 5%; }
+  right: 5%;
+  z-index: 999; }
 
 .ham-bg {
   z-index: 91;
   background-color: #222;
-  padding: 10px;
+  padding: 25px;
   border-radius: 50%;
   position: absolute;
   display: inline-block;
@@ -536,6 +559,15 @@ header {
   width: 100%;
   height: 100vh;
   position: relative; }
+  .home #bg,
+  .home #layer1,
+  .home #layer2,
+  .home #fg {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: transparent;
+    transition: all ease-out .1s; }
   .home .hidden-icons {
     position: absolute;
     left: 5%;
@@ -547,7 +579,7 @@ header {
       opacity: 0;
       color: #222;
       transition: all ease-out .3s; }
-      .home .hidden-icons a .fa-github-square {
+      .home .hidden-icons a .fa-github-square, .home .hidden-icons a .fa-codepen {
         margin-left: 5px; }
       .home .hidden-icons a:hover {
         transform: scale(1.1); }
@@ -572,46 +604,332 @@ header {
   z-index: 88;
   display: inline-block;
   background-color: transparent;
-  height: 15px;
-  width: 15px;
-  position: absolute;
-  left: 50%;
+  height: 35px;
+  width: 35px;
+  position: fixed;
+  right: 5%;
   bottom: 8%;
-  transform: translate(-50%, 0%);
   border-radius: 50%;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   justify-content: center;
   transition: all ease-out .3s; }
   .arrow:hover {
-    transform: translate(-50%, 0%) scale(1.2); }
-    .arrow:hover svg {
-      animation: arrowDown .9s linear 0s infinite; }
+    transform-origin: center;
+    transform: scale(1.5); }
   .arrow svg {
     line-height: 1;
     align-self: center;
     color: #222;
-    font-size: 30px;
+    font-size: 60px;
     transition: all ease-out .3s; }
 
 .shadow {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4)); }
 
-@keyframes arrowDown {
-  0% {
-    opacity: 1;
-    transform: translateY(0px); }
-  50% {
-    opacity: 1;
-    transform: translateY(10px); }
-  80% {
-    opacity: .7;
-    transform: translateY(15px); }
-  100% {
-    opacity: 0;
-    transform: translateY(20px); } }
 @media screen and (min-width: 650px) {
   .home .text {
     z-index: 90; } }
+.projects {
+  background-color: #222;
+  width: 100%;
+  position: relative;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  padding-bottom: 30px; }
+  .projects .title {
+    text-align: center;
+    color: #FEFEFE;
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    border-bottom: 2px solid #FEFEFE;
+    width: 90%; }
+  .projects #projects {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 300px);
+    z-index: 89; }
+    .projects #projects .flip3D {
+      color: #222;
+      height: 100%;
+      width: 100%;
+      position: relative; }
+      .projects #projects .flip3D .front, .projects #projects .flip3D .back {
+        position: absolute;
+        transform-origin: center center;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        transition: transform .5s linear 0s; }
+      .projects #projects .flip3D .front {
+        transform: perspective(600px) rotateX(0deg);
+        background: #222; }
+        .projects #projects .flip3D .front .overlay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.1); }
+        .projects #projects .flip3D .front .img1 {
+          width: 100%;
+          height: 100%;
+          background: url("../../img/java.png") left/cover no-repeat; }
+        .projects #projects .flip3D .front .img2 {
+          width: 100%;
+          height: 100%;
+          background: url("../../img/elegant.png") left/cover no-repeat; }
+        .projects #projects .flip3D .front .img3 {
+          width: 100%;
+          height: 100%;
+          background: url("../../img/mustacchio.png") center/cover no-repeat; }
+        .projects #projects .flip3D .front .img4 {
+          width: 100%;
+          height: 100%;
+          background: url("../../img/ajaxify-reddit.png") left/cover no-repeat; }
+        .projects #projects .flip3D .front .img5 {
+          width: 100%;
+          height: 100%;
+          background: url("../../img/cards-against.png") left/cover no-repeat; }
+        .projects #projects .flip3D .front .img6 {
+          width: 100%;
+          height: 100%;
+          background: url("../../img/weather-app.png") left/cover no-repeat; }
+      .projects #projects .flip3D .not-java {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 30px; }
+        .projects #projects .flip3D .not-java .headline {
+          display: flex; }
+          .projects #projects .flip3D .not-java .headline a {
+            display: inline-block;
+            color: #222;
+            padding-top: 7px;
+            padding-left: 10px; }
+            .projects #projects .flip3D .not-java .headline a svg {
+              font-size: 25px; }
+      .projects #projects .flip3D .back {
+        transform: perspective(600px) rotateX(180deg);
+        background: #FEFEFE;
+        font-family: 'Raleway', sans-serif;
+        padding: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+        .projects #projects .flip3D .back h1, .projects #projects .flip3D .back p {
+          margin: 0; }
+        .projects #projects .flip3D .back h1 {
+          margin-bottom: 10px; }
+        .projects #projects .flip3D .back .description {
+          font-weight: 300;
+          line-height: 15px;
+          margin-bottom: 10px; }
+        .projects #projects .flip3D .back .page-links-label {
+          margin-bottom: 10px; }
+        .projects #projects .flip3D .back .page-links {
+          height: 30%;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          text-align: center;
+          grid-gap: 2px; }
+          .projects #projects .flip3D .back .page-links a {
+            display: flex;
+            text-decoration: none;
+            color: #FEFEFE;
+            background-color: #222;
+            text-shadow: none;
+            justify-content: center;
+            border-radius: 1px; }
+            .projects #projects .flip3D .back .page-links a:hover {
+              color: #222;
+              background-color: #FEFEFE; }
+            .projects #projects .flip3D .back .page-links a span {
+              align-self: center; }
+      .projects #projects .flip3D:hover > .front {
+        transform: perspective(600px) rotateX(-180deg); }
+      .projects #projects .flip3D:hover > .back {
+        transform: perspective(600px) rotateX(0deg); }
+
+@media screen and (min-width: 650px) {
+  .projects {
+    padding-bottom: 30px; }
+    .projects .title {
+      width: 30%; }
+    .projects #projects {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 300px); }
+      .projects #projects .flip3D .not-java .headline a {
+        margin-top: -5px; }
+      .projects #projects .flip3D .not-java .headline h1 {
+        font-size: 25px; } }
+.about {
+  position: relative;
+  background-color: #FEFEFE;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  margin: 50px auto; }
+  .about .title {
+    text-align: center;
+    color: #222;
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    border-bottom: 2px solid #222;
+    width: 90%; }
+  .about .about-container .skills {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0; }
+    .about .about-container .skills .skillbar {
+      position: relative;
+      display: block;
+      margin-bottom: 15px;
+      width: 100%;
+      background-color: #eee;
+      height: 34px;
+      border-radius: 3px;
+      transition: all linear .3s; }
+    .about .about-container .skills .skillbar-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #222;
+      padding: 8px;
+      background-color: transparent;
+      width: 100px;
+      transition: all ease-out 1s; }
+      .about .about-container .skills .skillbar-title span {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(0%, -50%); }
+    .about .about-container .skills .skillbar-bar {
+      background-color: #222;
+      height: 35px;
+      width: 0px;
+      border-radius: 3px;
+      transition: all ease-out 1s; }
+    .about .about-container .skills .skillbar-bar-percent {
+      position: absolute;
+      right: 10px;
+      top: 0%;
+      font-size: 13px;
+      height: 35px;
+      line-height: 35px;
+      color: rgba(0, 0, 0, 0.4); }
+  .about .about-container .pic-text {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative; }
+    .about .about-container .pic-text img {
+      height: 200px;
+      width: 200px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      border: 3px solid #222;
+      border-radius: 5px;
+      transition: transform linear .2s;
+      box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4); }
+    .about .about-container .pic-text hr {
+      width: 300px;
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+    .about .about-container .pic-text .about-text {
+      width: 300px;
+      margin: 0 auto;
+      text-align: left;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300; }
+      .about .about-container .pic-text .about-text h4 {
+        font-size: 24px;
+        margin-bottom: 0px;
+        font-weight: 600; }
+      .about .about-container .pic-text .about-text p {
+        margin-top: 5px;
+        line-height: 20px; }
+
+@media screen and (min-width: 650px) {
+  .about .title {
+    width: 30%; }
+  .about .about-container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto; }
+    .about .about-container .skills {
+      padding: 0; }
+      .about .about-container .skills .skillbar {
+        height: 54px; }
+      .about .about-container .skills .skillbar-title {
+        height: 100%; }
+      .about .about-container .skills .skillbar-bar {
+        height: 54px; }
+      .about .about-container .skills .skillbar-bar-percent {
+        height: 55px;
+        line-height: 55px; }
+    .about .about-container .pic-text {
+      flex-direction: column;
+      width: 80%; }
+      .about .about-container .pic-text img {
+        top: 35%;
+        left: 50%; }
+      .about .about-container .pic-text .about-text {
+        width: 500px;
+        top: 68%;
+        left: 50%;
+        padding: 30px;
+        padding-top: 0px; }
+        .about .about-container .pic-text .about-text h4 {
+          margin-top: 0px;
+          font-size: 42px; }
+        .about .about-container .pic-text .about-text p {
+          line-height: 25px;
+          font-size: 18px; } }
+.contact {
+  position: relative;
+  height: 200px; }
+  .contact .contact-container {
+    position: relative;
+    left: 0%;
+    bottom: 0%;
+    margin-bottom: 30px;
+    background-color: #FEFEFE;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
+    padding-left: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .contact .contact-container .info {
+      margin-bottom: 20px; }
+      .contact .contact-container .info .detail {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px; }
+        .contact .contact-container .info .detail svg {
+          font-size: 18px;
+          margin-right: 10px; }
+        .contact .contact-container .info .detail a {
+          font-family: 'Raleway', sans-serif;
+          color: #222;
+          text-decoration: none; }
+    .contact .contact-container .links a svg {
+      color: #222;
+      font-size: 40px;
+      margin-right: 5px; }
 
 /*# sourceMappingURL=main.css.map */
